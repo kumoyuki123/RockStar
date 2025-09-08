@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        body {
+            max-width: 1000px;
+            margin: 20px auto;
+            font-size: 1.5em;
+        }
+        button {
+            padding: 10px 20px;
+        }
+        #backdrop {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0.5;
+            display: none;
+        }
+        #modal {
+            position: absolute;
+            top: -350px;
+            left: 30%;
+            width: 40%;
+            height: 300px;
+            border-radius: 5px;
+            background-color: #333;
+            transition: top 0.5s;
+        }
+        #modal h2 {
+            font-size: 1.2em;
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+            border-radius: 5px 5px 0 0;
+        }
+        #modal h2 a {
+            color: #fff;
+            float: right;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe illo velit corrupti eligendi officiis laudantium consectetur officia ipsam vitae ratione ipsum ducimus asperiores nemo, impedit provident quas tempore! Quae, officia! Distinctio facilis amet quo officia quos fuga laudantium nulla! Sint quia incidunt expedita, officia nihil praesentium asperiores fugiat quis modi exercitationem aliquid ad corporis numquam voluptate vitae aperiam veritatis ullam dolor delectus quidem repellendus? Placeat eos animi molestiae nostrum voluptate, ducimus tenetur debitis maiores quas aliquid tempora provident incidunt, in vitae reprehenderit, corporis harum. Quidem error perspiciatis esse iure illo, veniam dolore distinctio dolorem delectus facilis. Quas, aperiam molestias deleniti architecto cum eius laudantium harum, praesentium tempora accusantium laboriosam error libero, numquam saepe voluptatibus amet. Rem facilis quae veniam doloribus dolorem deserunt, eos quasi! Quidem similique est eum reiciendis, eos praesentium facilis dolorum nulla architecto laudantium facere iste quo minima debitis atque dolor cumque ratione fuga quae beatae provident! Quam.</p>
+    <Button onclick="show()">Ok</Button>
+    <div id="backdrop" onclick="hide()"></div>
+    <div id="modal">
+        <h2>Modal Title <a href="#" onclick="hide()">&times</a></h2>
+    </div>
+    <script>
+        function show() {
+            document.querySelector("#backdrop").style.display = "block";
+            document.querySelector("#modal").style.top = "15%";
+        }
+        function hide() {
+            document.querySelector("#backdrop").style.display = "none";
+            document.querySelector("#modal").style.top = "-350px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <style>
+        .wrap {
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .wrap button {
+            position: absolute;
+            top: 40%;
+            font-size: 3em;
+            background: transparent;
+            border: 0 none;
+            color: white;
+            opacity: 0.6;
+        }
+        #prev {
+            left: 20px;
+        }
+        #next {
+            right: 20px;
+        }
+        .box {
+            height: 300px;
+            font-size: 2em;
+            text-align: center;
+            color: #fff;
+            line-height: 300px;
+        }
+        #box1 {
+            background-color: deeppink;
+        }
+        #box2 {
+            background-color: deepskyblue;
+            display: none;
+        }
+        #box3 {
+            background-color: green;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <button id="prev" onclick="prev()">&laquo;</button>
+        <button id="next" onclick="next()">&raquo;</button>
+        <div id="box1" class="box">Box 1</div>
+        <div id="box2" class="box">Box 2</div>
+        <div id="box3" class="box">Box 3</div>
+    </div>
+    <script>
+        var box = 1;
+        setInterval(next, 3000);
+        function next() {
+            document.querySelector("#box" + box ).style.display = "none";
+            box ++;
+            if(box>3) box = 1;
+            document.querySelector("#box" + box).style.display = "block";
+        }
+        function prev() {
+            document.querySelector("#box" + box ).style.display = "none";
+            box --;
+            if(box<1) box = 3;
+            document.querySelector("#box" + box).style.display = "block";
+        }
+    </script>
+</body>
+</html>

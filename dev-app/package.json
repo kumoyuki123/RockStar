@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "dev": "echo \"Hello NPM\""
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "jest": "^30.1.3"
+  }
+}

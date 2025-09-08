@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            height: 100px;
+            background-color: deeppink;
+        }
+        main {
+            display: flex;
+        }
+        nav{
+            width: 200px;
+            height: 200px;
+            background-color: darkblue;
+        }
+        article {
+            width: 600px;
+            height: 200px;
+            background-color: aqua;
+        }
+        aside {
+            width: 200px;
+            height: 200px;
+            background-color: #e9e903;
+        }
+        footer {
+            height: 50px;
+            background-color: silver;
+        }
+        @media (max-width: 1000px) {
+            .wrap {
+                width: 100%;
+            }
+            main {
+                flex-wrap: wrap;
+            }
+            nav {
+                width: 100%;
+            }
+            article, aside {
+                width: 50%;
+            }
+        }
+        @media (max-width: 700px) {
+            article, aside {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header></header>
+        <main>
+            <nav></nav>
+            <article></article>
+            <aside></aside>
+        </main>
+        <footer></footer>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <button onclick="hello()">Submit</button>
+    <script>
+        function hello() {
+            var p = document.querySelector("p");
+            p.textContent = "Hello JavaScript";
+            p.style.backgroundColor="blue";
+            p.style.padding="20px";
+            p.style.borderLeft="2px dotted orange"
+        }
+    </script>
+</body>
+</html>
